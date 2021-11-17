@@ -25,10 +25,10 @@ Questions
 5a) Do your users require a script to use the application?
 5b) What are the scripts needed to run the application?
 
-6a) How can people contribute to this app?
-
 7a) Does your project require an test process?
 7b) What is the test script/process?
+
+6a) How can people contribute to this app?
 
 8)choose a license? (provide a list of licenses they choose from)
 
