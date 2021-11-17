@@ -6,20 +6,24 @@ const title = (answers) => {
 };
 
 const tableOfContents = (answers) => {
-  // const tOCArray = answers.firstSet.tableOfContent.split("");
+  const tOCArray = answers.firstSet.tableOfContent.split(" ");
 
-  return answers.split(" ").forEach((each) => {
-    return `
-    ## Table of Contents
+  const subtitlesList = tOCArray
+    .map((each) => {
+      return `- [${each}](#${each.toLowerCase()})
+      
+      `;
+    })
+    .join("");
 
+  return ` 
+  ## Table of Contents
 
-    - [${each}](#${each.toLowerCase()})
-    
-    `;
-  });
+  
+   - ${subtitlesList}
+  
+  `;
 };
-
-// console.log(tableOfContents("description tests usage lisence install"));
 
 const description = (answers) => {
   return `
@@ -35,7 +39,7 @@ const installation = (answers) => {
 Run the following script to install the packages required for the application:
 
 \`\`\`
-ADD TEXT HERE
+${answers.secondSet.installationProcess}
 \`\`\``;
 };
 
@@ -46,7 +50,7 @@ const usage = (answers) => {
 To use the application run the following script:
   
 \`\`\`
-ADD TEXT HERE
+${answers.secondSet.usageProcess}
 \`\`\``;
 };
 
@@ -57,7 +61,7 @@ const tests = (answers) => {
 To use the application run the following script:
   
 \`\`\`
-ADD TEXT HERE
+${answers.secondSet.testsProcess}
 \`\`\`
   `;
 };
@@ -77,21 +81,35 @@ ${answers.lastSet.license}
   `;
 };
 
+const contact = (answers) => {
+  return `
+## Contact Information
+
+- GITHUB: https://github.com/${answers.lastSet.gitHubUsername}
+
+- EMAIL: ${answers.lastSet.email}
+  `;
+};
+
 const generateReadmeFileCode = (answers) => {
   return `
     ${title(answers)}
 
-    
+    ${tableOfContents(answers)}
 
     ${description(answers)}
-    
-    ${usage(answers)}
 
-    ${tests(answers)}
+    ${answers.secondSet.installationProcess ? installation(answers) : ""}
+    
+    ${answers.secondSet.usageProcess ? usage(answers) : ""}
+
+    ${answers.secondSet.testsProcess ? tests(answers) : ""}
 
     ${contributors(answers)}
     
     ${license(answers)}
+
+    ${contact(answers)}
   `;
 };
 
