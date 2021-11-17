@@ -47,24 +47,20 @@ const processTypeQuestionssssss = [
 ];
 
 const processTypeQuestions = (userCheckedProcesses) => {
-  const inquirerArray = [];
-
-  const processTypeObj = userCheckedProcesses.forEach((each) => {
+  const processTypeObj = userCheckedProcesses.map((each) => {
     const obj = {
       type: "input",
       name: `${each}Process`,
       message: `What is the projects ${each} process?`,
     };
 
-    console.log(obj);
+    return obj;
   });
 
-  console.log(processTypeObj);
+  return processTypeObj;
 };
 
-const array = ["install", "test", "usage"];
-
-processTypeQuestions(array);
+// processTypeQuestions(array);
 
 const lastSetOfQuestions = [
   {
@@ -77,6 +73,16 @@ const lastSetOfQuestions = [
     name: "license",
     message: "Choose a license from the list below?",
     choices: ["MIT", "R", "L"],
+  },
+  {
+    type: "input",
+    name: "gitHubUsername",
+    message: "What is your GitHub Username?",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "What is email address?",
   },
 ];
 

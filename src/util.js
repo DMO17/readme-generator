@@ -10,6 +10,9 @@ const tableOfContents = (answers) => {
 
   return answers.split(" ").forEach((each) => {
     return `
+    ## Table of Contents
+
+
     - [${each}](#${each.toLowerCase()})
     
     `;
@@ -78,10 +81,8 @@ const generateReadmeFileCode = (answers) => {
   return `
     ${title(answers)}
 
-    ## Table of Contents
-
-   
     
+
     ${description(answers)}
     
     ${usage(answers)}

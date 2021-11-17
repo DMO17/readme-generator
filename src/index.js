@@ -11,26 +11,28 @@ const {
 
 const init = async () => {
   // prompt questions
-
   const startAnswers = await inquirer.prompt(starterQuestions);
+  console.log(startAnswers);
 
-  // const nextAnswers = await inquirer.prompt(processTypeQuestions(startAnswers));
-  // console.log(nextAnswers);
+  const nextAnswers = await inquirer.prompt(
+    processTypeQuestions(startAnswers.requiredProcesses)
+  );
+  console.log(nextAnswers);
 
   const lastSetOfAnswers = await inquirer.prompt(lastSetOfQuestions);
 
   const allAnswers = {
     firstSet: startAnswers,
-    // secondSet: nextAnswers,
+    secondSet: nextAnswers,
     lastSet: lastSetOfAnswers,
   };
 
-  // use the answers to call the funtions to create each section of the readme file code.
-
-  const readme = generateReadmeFileCode(allAnswers);
   console.log(allAnswers);
-  // write to file
 
+  // use the answers to call the funtions to create each section of the readme file code.
+  const readme = generateReadmeFileCode(allAnswers);
+
+  // write to file
   writeToFile("readmeGenerated.md", readme);
 };
 
