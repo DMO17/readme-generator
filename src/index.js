@@ -12,12 +12,10 @@ const {
 const init = async () => {
   // prompt questions
   const startAnswers = await inquirer.prompt(starterQuestions);
-  console.log(startAnswers);
 
   const nextAnswers = await inquirer.prompt(
     processTypeQuestions(startAnswers.requiredProcesses)
   );
-  console.log(nextAnswers);
 
   const lastSetOfAnswers = await inquirer.prompt(lastSetOfQuestions);
 

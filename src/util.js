@@ -6,23 +6,18 @@ const title = (answers) => {
 };
 
 const tableOfContents = (answers) => {
-  const tOCArray = answers.firstSet.tableOfContent.split(" ");
+  return `
+## Table of Contents 
 
-  const subtitlesList = tOCArray
-    .map((each) => {
-      return `- [${each}](#${each.toLowerCase()})
-      
-      `;
-    })
-    .join("");
-
-  return ` 
-  ## Table of Contents
-
-  
-   - ${subtitlesList}
-  
-  `;
+- [Description](#description)
+${
+  answers.secondSet.installationProcess ? "- [Installation](#installation)" : ""
+}
+${answers.secondSet.usageProcess ? "- [Usage](#usage)" : ""}
+${answers.secondSet.testsProcess ? "- [Tests](#tests)" : ""}
+- [Contribution](#contribution)
+- [License](#license)
+- [Contact](#contact)`;
 };
 
 const description = (answers) => {
@@ -68,7 +63,7 @@ ${answers.secondSet.testsProcess}
 
 const contributors = (answers) => {
   return `
-## Contributing
+## Contribution
     
 ${answers.lastSet.contribution}`;
 };
@@ -83,7 +78,9 @@ ${answers.lastSet.license}
 
 const contact = (answers) => {
   return `
-## Contact Information
+## Contact 
+
+If you have any Questions contact me using the following:
 
 - GITHUB: https://github.com/${answers.lastSet.gitHubUsername}
 
