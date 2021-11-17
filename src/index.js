@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
-const { generateReadmeFileCode } = require("./util");
+const fs = require("fs");
+const { generateReadmeFileCode, writeToFile } = require("./util");
 
 const init = () => {
   // prompt questions
@@ -9,7 +10,10 @@ const init = () => {
   const readme = generateReadmeFileCode();
 
   console.log(readme);
+
   // write to file
+
+  writeToFile("readmeGenerated.md", readme);
 };
 
 init();

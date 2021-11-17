@@ -1,5 +1,8 @@
+const fs = require("fs");
+
 const title = (answers) => {
-  return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
+  return `
+  # TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
 };
 
 const tableOfContents = (answers) => {
@@ -11,61 +14,62 @@ const tableOfContents = (answers) => {
   - [Usage](#usage)
   - [Tests](#tests)
   - [Contributing](#contributing)
-  - [License](#license)
-    `;
+  - [License](#license)`;
 };
 
 const description = (answers) => {
-  return `## Description
+  return `
+## Description
 
-        ADD TEXT HERE`;
+ADD TEXT HERE`;
 };
 
 const installation = (answers) => {
-  return `
-  ## Installation
+  return ` 
+## Installation
   
-  Run the following script to install the packages required for the application:
-  
-  \`\`\`
-  ADD TEXT HERE
-  \`\`\``;
+Run the following script to install the packages required for the application:
+
+\`\`\`
+ADD TEXT HERE
+\`\`\``;
 };
 
 const usage = (answers) => {
   return `
-  ## Usage
+## Usage
 
-  To use the application run the following script:
+To use the application run the following script:
   
-  \`\`\`
-  ADD TEXT HERE
-  \`\`\``;
+\`\`\`
+ADD TEXT HERE
+\`\`\``;
 };
 
 const tests = (answers) => {
   return `
-  ## Tests
+## Tests
   
-  To use the application run the following script:
+To use the application run the following script:
   
-  \`\`\`
-  ADD TEXT HERE
-  \`\`\`
+\`\`\`
+ADD TEXT HERE
+\`\`\`
   `;
 };
 
 const contributors = (answers) => {
-  return `## Contributing
+  return `
+## Contributing
     
-    ADD TEXT HERE`;
+ADD TEXT HERE`;
 };
 
 const license = (answers) => {
   return `
-  ## License
+## License
 
-  ADD TEXT HERE
+ADD TEXT HERE
   `;
 };
 
@@ -87,14 +91,15 @@ const generateReadmeFileCode = (answers) => {
   `;
 };
 
+const writeToFile = (filePath, data) => {
+  try {
+    fs.writeFileSync(filePath, data);
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
 module.exports = {
-  title,
-  tableOfContents,
-  description,
-  installation,
-  usage,
-  tests,
-  contributors,
-  license,
   generateReadmeFileCode,
+  writeToFile,
 };
