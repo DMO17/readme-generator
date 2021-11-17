@@ -1,20 +1,20 @@
 const readmeGeneratorQuestions = [
-  //   {
-  //     type: "input",
-  //     name: "title",
-  //     message: "What is the title of your project?",
-  //   },
-  //   {
-  //     type: "input",
-  //     name: "tableOfContent",
-  //     message:
-  //       "What are the subtitles of each section of your readme to form a table of contents?",
-  //   },
-  //   {
-  //     type: "input",
-  //     name: "description",
-  //     message: "Provide a description for your Project",
-  //   },
+  {
+    type: "input",
+    name: "title",
+    message: "What is the title of your project?",
+  },
+  {
+    type: "input",
+    name: "tableOfContent",
+    message:
+      "What are the subtitles of each section of your readme to form a table of contents?",
+  },
+  {
+    type: "input",
+    name: "description",
+    message: "Provide a description for your Project",
+  },
   {
     type: "checkbox",
     name: "requiredProcesses",
@@ -62,6 +62,22 @@ const processTypeQuestions = (userCheckedProcesses) => {
 
 const array = ["install", "test", "usage"];
 
-const lastSetOfQuestions = () => {};
+const lastSetOfQuestions = [
+  {
+    type: "input",
+    name: "contribution",
+    message: "How can people contribute to this app?",
+  },
+  {
+    type: "list",
+    name: "license",
+    message: "Choose a license from the list below?",
+    choices: ["MIT", "R", "L"],
+  },
+];
 
-module.exports = { readmeGeneratorQuestions, processTypeQuestions };
+module.exports = {
+  readmeGeneratorQuestions,
+  processTypeQuestions,
+  lastSetOfQuestions,
+};

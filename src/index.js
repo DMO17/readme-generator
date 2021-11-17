@@ -5,6 +5,7 @@ const {
   readmeGeneratorQuestions,
   nextQuestionIdentifier,
   processTypeQuestions,
+  lastSetOfQuestions,
 } = require("./questions");
 
 const init = async () => {
@@ -12,11 +13,18 @@ const init = async () => {
 
   const startAnswers = await inquirer.prompt(readmeGeneratorQuestions);
 
-  console.log(startAnswers);
+  // const nextAnswers = await inquirer.prompt(processTypeQuestions(startAnswers));
+  // console.log(nextAnswers);
 
-  const nextAnswers = await inquirer.prompt(processTypeQuestions(startAnswers));
+  const lastSetOfAnswers = await inquirer.prompt(lastSetOfQuestions);
 
-  console.log(nextAnswers);
+  const allAnswers = {
+    firstSet: startAnswers,
+    // secondSet: nextAnswers,
+    lastSet: lastSetOfAnswers,
+  };
+
+  console.log(allAnswers);
   // use the answers to call the funtions to create each section of the readme file code.
 
   const readme = generateReadmeFileCode();
