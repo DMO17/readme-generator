@@ -6,12 +6,6 @@ const starterQuestions = [
   },
   {
     type: "input",
-    name: "tableOfContent",
-    message:
-      "What are the subtitles of each section of your readme to form a table of contents?",
-  },
-  {
-    type: "input",
     name: "description",
     message: "Provide a description for your Project",
   },
@@ -21,9 +15,10 @@ const starterQuestions = [
     message:
       "Check the box if your project requires any of the following procedures",
     choices: [
-      { name: "installation", value: "installation" },
-      { name: "usage", value: "usage" },
-      { name: "tests", value: "tests" },
+      { name: "Installation", value: "installation" },
+      { name: "Usage", value: "usage" },
+      { name: "Tests", value: "tests" },
+      { name: "None of these procedures are required", value: "none" },
     ],
   },
 ];
