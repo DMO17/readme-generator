@@ -1,6 +1,6 @@
 
     
-  # rd ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
+  # rhrwhwr ![IBM](https://img.shields.io/static/v1?label=IBM&message=License&color=yellow)
 
     
 ## Table of Contents 
@@ -11,12 +11,12 @@
 
 - [Contribution](#contribution)
 - [License](#license)
-- [Contact](#Contact)
+- [Contact](#contact)
 
     
 ## Description
 
-rtb
+wrhwr
 
      
 ## Installation
@@ -24,7 +24,7 @@ rtb
 Run the following script to install the packages required for the application:
 
 ```
-tgtr
+wrhw
 ```
     
     
@@ -34,12 +34,12 @@ tgtr
     
 ## Contribution
     
-rthrw
+wrthwr
     
     
 ## License
 
-MIT
+IBM Public License Version 1.0
   
 
     
@@ -47,8 +47,8 @@ MIT
 
 If you have any Questions contact me using the following:
 
-- GITHUB: https://github.com/rthw
+- GITHUB: https://github.com/wrth
 
-- EMAIL: rthw
+- EMAIL: wrth
   
   

@@ -1,8 +1,21 @@
 const fs = require("fs");
 
+const randomColor = () => {
+  const colors = ["green", "yellow", "blue", "red", "white", "pink"];
+  const randomColorsIndex = Math.floor(Math.random() * colors.length);
+
+  return colors[randomColorsIndex];
+};
+
+console.log(randomColor());
+
 const title = (answers) => {
   return `
-  # ${answers.firstSet.title} ![${answers.lastSet.license}](https://img.shields.io/static/v1?label=${answers.lastSet.license}&message=License&color=green)`;
+  # ${answers.firstSet.title} ![${
+    answers.lastSet.license[0]
+  }](https://img.shields.io/static/v1?label=${
+    answers.lastSet.license[0]
+  }&message=License&color=${randomColor()})`;
 };
 
 const tableOfContents = (answers) => {
@@ -72,7 +85,7 @@ const license = (answers) => {
   return `
 ## License
 
-${answers.lastSet.license}
+${answers.lastSet.license[1]}
   `;
 };
 

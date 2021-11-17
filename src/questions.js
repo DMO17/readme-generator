@@ -67,7 +67,28 @@ const lastSetOfQuestions = [
     type: "list",
     name: "license",
     message: "Choose a license from the list below?",
-    choices: ["MIT", "R", "L"],
+    choices: [
+      {
+        name: "MIT",
+        value: ["MIT", "The MIT License"],
+      },
+      {
+        name: "Mozilla",
+        value: ["Mozilla", "Mozilla Public License 2.0"],
+      },
+      {
+        name: "Zlib",
+        value: ["Zlib", "The zlib/libpng License"],
+      },
+      {
+        name: "IBM",
+        value: ["IBM", "IBM Public License Version 1.0"],
+      },
+      {
+        name: "Apache",
+        value: ["Apache", "Apache 2.0 License"],
+      },
+    ],
   },
   {
     type: "input",
