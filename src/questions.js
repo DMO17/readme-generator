@@ -49,18 +49,22 @@ const processTypeQuestionssssss = [
 const processTypeQuestions = (userCheckedProcesses) => {
   const inquirerArray = [];
 
-  return userCheckedProcesses.forEach((each) => {
+  const processTypeObj = userCheckedProcesses.forEach((each) => {
     const obj = {
       type: "input",
       name: `${each}Process`,
       message: `What is the projects ${each} process?`,
     };
 
-    return obj;
+    console.log(obj);
   });
+
+  console.log(processTypeObj);
 };
 
 const array = ["install", "test", "usage"];
+
+processTypeQuestions(array);
 
 const lastSetOfQuestions = [
   {
