@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ttt": "node src/questions.js"
+    "ttt": "node src/util.js"
   },
   "repository": {
     "type": "git",

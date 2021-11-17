@@ -2,26 +2,27 @@ const fs = require("fs");
 
 const title = (answers) => {
   return `
-  # TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
+  # ${answers.firstSet.title} ![${answers.lastSet.license}](https://img.shields.io/static/v1?label=${answers.lastSet.license}&message=License&color=green)`;
 };
 
 const tableOfContents = (answers) => {
-  return `
-  ## Table of Contents
+  // const tOCArray = answers.firstSet.tableOfContent.split("");
 
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Tests](#tests)
-  - [Contributing](#contributing)
-  - [License](#license)`;
+  return answers.split(" ").forEach((each) => {
+    return `
+    - [${each}](#${each.toLowerCase()})
+    
+    `;
+  });
 };
+
+// console.log(tableOfContents("description tests usage lisence install"));
 
 const description = (answers) => {
   return `
 ## Description
 
-ADD TEXT HERE`;
+${answers.firstSet.description}`;
 };
 
 const installation = (answers) => {
@@ -62,14 +63,14 @@ const contributors = (answers) => {
   return `
 ## Contributing
     
-ADD TEXT HERE`;
+${answers.lastSet.contribution}`;
 };
 
 const license = (answers) => {
   return `
 ## License
 
-ADD TEXT HERE
+${answers.lastSet.license}
   `;
 };
 
@@ -77,7 +78,9 @@ const generateReadmeFileCode = (answers) => {
   return `
     ${title(answers)}
 
-    ${tableOfContents(answers)}
+    ## Table of Contents
+
+   
     
     ${description(answers)}
     

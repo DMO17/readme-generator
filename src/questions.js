@@ -1,4 +1,4 @@
-const readmeGeneratorQuestions = [
+const starterQuestions = [
   {
     type: "input",
     name: "title",
@@ -77,7 +77,7 @@ const lastSetOfQuestions = [
 ];
 
 module.exports = {
-  readmeGeneratorQuestions,
+  starterQuestions,
   processTypeQuestions,
   lastSetOfQuestions,
 };

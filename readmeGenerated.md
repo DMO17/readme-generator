@@ -1,21 +1,15 @@
 
     
-  # TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
+  # readMe ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
 
-    
-  ## Table of Contents
+    ## Table of Contents
 
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Tests](#tests)
-  - [Contributing](#contributing)
-  - [License](#license)
+   
     
     
 ## Description
 
-ADD TEXT HERE
+generates a read me 
     
     
 ## Usage
@@ -39,11 +33,11 @@ ADD TEXT HERE
     
 ## Contributing
     
-ADD TEXT HERE
+by commenting
     
     
 ## License
 
-ADD TEXT HERE
+by commenting
   
   
