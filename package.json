@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ttt": "node src/util.js"
+    "ttt": "node src/test.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/DMO17/readme-generator#readme",
   "dependencies": {
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "inquirer-loop": "^0.3.0"
   }
 }
