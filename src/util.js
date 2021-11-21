@@ -7,8 +7,6 @@ const randomColor = () => {
   return colors[randomColorsIndex];
 };
 
-console.log(randomColor());
-
 const title = (answers) => {
   return `
   # ${answers.firstSet.title} ![${

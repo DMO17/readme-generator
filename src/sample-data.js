@@ -1,19 +1,23 @@
 const answers = {
   firstSet: {
-    title: "read",
-    tableOfContent: "d d d d d",
-    description: "gggg",
+    title: "aerg",
+    description: "aerg",
     requiredProcesses: ["installation", "usage", "tests"],
   },
   secondSet: {
-    installationProcess: "safger",
-    usageProcess: "ergerg",
-    testsProcess: "ergerq",
+    installationProcess: "aerg",
+    usageProcess: "aerg",
+    testsProcess: "aerg",
+  },
+  thirdSet: {
+    install: { installationRepeat: [Array] },
+    usage: { usageRepeat: [Array] },
+    test: { testRepeat: [Array] },
   },
   lastSet: {
-    contribution: "ergethoiioerq",
-    license: "MIT",
-    gitHubUsername: "epovjer",
-    email: "oieroier",
+    contribution: "erGERgERGer",
+    license: ["Zlib", "The zlib/libpng License"],
+    gitHubUsername: "ergegE",
+    email: "Wgrwger",
   },
 };

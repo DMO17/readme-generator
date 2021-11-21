@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-inquirer.registerPrompt("loop", require("inquirer-loop")(inquirer));
+// inquirer.registerPrompt("loop", require("inquirer-loop")(inquirer));
 
 const testQuestion = [
   [

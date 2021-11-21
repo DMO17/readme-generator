@@ -23,39 +23,76 @@ const starterQuestions = [
   },
 ];
 
-const processTypeQuestionssssss = [
-  {
-    type: "input",
-    name: "installProcess",
-    message: "What is the projects installations process?",
-  },
-  {
-    type: "input",
-    name: "usageProcess",
-    message: "What are the scripts needed to run the application? ?",
-  },
-  {
-    type: "input",
-    name: "testProcess",
-    message: "What is the test script/process ?",
-  },
-];
-
 const processTypeQuestions = (userCheckedProcesses) => {
-  const processTypeObj = userCheckedProcesses.map((each) => {
-    const obj = {
-      type: "input",
-      name: `${each}Process`,
-      message: `What is the projects ${each} process?`,
-    };
+  if (!userCheckedProcesses.includes("none")) {
+    return userCheckedProcesses.map((each) => {
+      const obj = {
+        type: "input",
+        name: `${each}Process`,
+        message: `What is the projects (first) ${each} process step?`,
+      };
 
-    return obj;
-  });
-
-  return processTypeObj;
+      return obj;
+    });
+  }
 };
 
-// processTypeQuestions(array);
+const installationNextStep = (userCheckedProcesses) => {
+  if (userCheckedProcesses.includes("installation")) {
+    return [
+      {
+        type: "loop",
+        name: "installationRepeat",
+        message: "Is there another installation process step?",
+        questions: [
+          {
+            type: "input",
+            name: "installationKey",
+            message: "What is the next step in the installation process?",
+          },
+        ],
+      },
+    ];
+  }
+};
+
+const usageNextStep = (userCheckedProcesses) => {
+  if (userCheckedProcesses.includes("usage")) {
+    return [
+      {
+        type: "loop",
+        name: "usageRepeat",
+        message: "Is there another usage process step?",
+        questions: [
+          {
+            type: "input",
+            name: "usageKey",
+            message: "What is the next step in the usage process?",
+          },
+        ],
+      },
+    ];
+  }
+};
+
+const testNextStep = (userCheckedProcesses) => {
+  if (userCheckedProcesses.includes("tests")) {
+    return [
+      {
+        type: "loop",
+        name: "testRepeat",
+        message: "Is there another test process step?",
+        questions: [
+          {
+            type: "input",
+            name: "testKey",
+            message: "What is the next step in the test process?",
+          },
+        ],
+      },
+    ];
+  }
+};
 
 const lastSetOfQuestions = [
   {
@@ -102,8 +139,18 @@ const lastSetOfQuestions = [
   },
 ];
 
+const asf = [
+  "installation",
+  "usage",
+  "tests",
+  "None of these procedures are required",
+];
+
 module.exports = {
   starterQuestions,
   processTypeQuestions,
+  installationNextStep,
+  usageNextStep,
+  testNextStep,
   lastSetOfQuestions,
 };
