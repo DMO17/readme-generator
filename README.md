@@ -26,7 +26,7 @@ THEN I am taken to the corresponding section of the README
 
 ## Video :
 
-To see how the application works <a href=https://dmo17.github.io/weather-dashboard/>click here </a>
+To see how the application works <a href='https://drive.google.com/drive/folders/1P9-7Eeu0HK45EcjyIGvj9knCXEmG0mqP?usp=sharing'>click here </a>
 
 ## Preview: Image of the Code:
 
