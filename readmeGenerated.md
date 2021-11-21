@@ -1,6 +1,6 @@
 
     
-  # fds ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=blue)
+  # ReadMe File Generator ![IBM](https://img.shields.io/static/v1?label=IBM&message=License&color=white)
 
     
 ## Table of Contents 
@@ -8,7 +8,7 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Tests](#tests)
+
 - [Contribution](#contribution)
 - [License](#license)
 - [Contact](#contact)
@@ -16,7 +16,7 @@
     
 ## Description
 
-SDFSD
+This command line application allows users to create a their projecst readme file dynamicalls by asnwering the command lines questions
 
      
 ## Installation
@@ -24,7 +24,7 @@ SDFSD
 Run the following script to install the packages required for the application:
 
 ```
-fdhadf
+npm install inquirer
 ```
     
     
@@ -33,28 +33,20 @@ fdhadf
 To use the application run the following script:
   
 ```
-adfha
+npm run start
 ```
 
     
-## Tests
-  
-To use the application run the following script:
-  
-```
-adfha
-```
-  
 
     
 ## Contribution
     
-adfhdaf
+By coantacting me and leaving any comments
     
     
 ## License
 
-The MIT License
+IBM Public License Version 1.0
   
 
     
@@ -62,8 +54,8 @@ The MIT License
 
 If you have any Questions contact me using the following:
 
-- GITHUB: https://github.com/dfha
+- GITHUB: https://github.com/DMO17
 
-- EMAIL: dafhaf
+- EMAIL: dmo@hotmail.com
   
   
